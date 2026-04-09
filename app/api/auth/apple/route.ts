@@ -26,9 +26,10 @@ export async function POST(req: NextRequest) {
   if (user)  params.set("user", encodeURIComponent(user));
   if (error) params.set("error", error);
 
-  // Redirect to the frontend callback page
+  // Redirect to the frontend callback page with 303 to convert POST to GET
   return NextResponse.redirect(
-    new URL(`/callback?${params.toString()}`, req.url)
+    new URL(`/callback?${params.toString()}`, req.url),
+    303
   );
 }
 
