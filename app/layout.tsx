@@ -1,9 +1,9 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sign in with Apple",
-  description: "Apple OAuth Demo",
+  title: "Sign In",
+  description: "Sign in with Apple",
 };
 
 export default function RootLayout({
